@@ -1,0 +1,51 @@
+:root {
+    --border-color: #838383;
+}
+ul.comment_tree {
+    line-height: 2;
+    margin: 0px;
+    list-style: none;
+}
+ul.comment_tree li {
+    position: relative;
+}
+ul.comment_tree li:before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 0;
+    border-left: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    width: 20px;
+    height: 4em;
+}
+ul.comment_tree li:after {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 0;
+    border-left: 2px solid var(--border-color);
+    width: 10px;
+    height: 100%;
+}
+ul.comment_tree li:last-child::after {
+    display: none;
+}
+ul.tree > li::before, ul.tree > li::after{
+    display: none;
+}
+.replyToComment {
+    font-size: 13px;
+    cursor: pointer;
+}
+#comment_area {
+    background: #e7e7e7;
+}
+.coment_section {
+    background: rgb(255 255 255 / 70%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    width: fit-content;
+}
